@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object mapEx {
 
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("filterEx").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("mapEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
