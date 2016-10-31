@@ -9,7 +9,7 @@ import org.apache.spark.{Partitioner, SparkConf, SparkContext}
 object subtractEx {
 
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("IntersectionEx").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("subtractEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
