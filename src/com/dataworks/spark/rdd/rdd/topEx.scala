@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object topEx {
 
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("foldEx").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("topEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 

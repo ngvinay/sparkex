@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object takeEx {
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("foldEx").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("takeEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
