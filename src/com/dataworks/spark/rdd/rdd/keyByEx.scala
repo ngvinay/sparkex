@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object keyByEx {
 
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("groupByEx").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("keyByEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
