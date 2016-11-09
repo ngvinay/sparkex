@@ -19,7 +19,7 @@ object coalesceEx {
     val baseRdd: RDD[Int] = sc.parallelize(1 to 100, 5)
     println("Base RDD Partition size :" + baseRdd.partitions.length)
 
-    val repartRdd: RDD[Int] = baseRdd.coalesce(2, true)
+    val repartRdd: RDD[Int] = baseRdd.coalesce(2, shuffle = true)
     println("Coalesced RDD Partition size :" + repartRdd.partitions.length)
     println(repartRdd.toDebugString)
   }
