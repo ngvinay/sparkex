@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object minEx {
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("maxEx").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("minEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
