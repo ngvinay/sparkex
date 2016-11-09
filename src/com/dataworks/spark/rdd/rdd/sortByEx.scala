@@ -22,7 +22,6 @@ object sortByEx {
     val flattenedRdd: RDD[String] = filteredRdd.flatMap(line => line.split(" "))
     val descendingRdd: RDD[String] = flattenedRdd.sortBy(word => word(0), ascending = false, 3)
     descendingRdd.glom().map(x => x.mkString(", ")).foreach(println)
-
   }
 
 }
