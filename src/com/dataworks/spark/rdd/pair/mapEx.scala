@@ -17,7 +17,7 @@ object mapEx {
   }
 
   def createPair(sc: SparkContext): Unit = {
-    val baseRDD: RDD[String] = sc.textFile("/Users/Sandeep/dataworks/data/spark", 4)
+    val baseRDD: RDD[String] = sc.textFile("/Users/Sandeep/dataworks/data/spark")
     val filteredRdd: RDD[String] = baseRDD.filter(line => !line.isEmpty)
     val word2LineRdd: RDD[(String, String)] = filteredRdd.map(lines => (lines.split(" ")(0), lines))
     val char2WordRdd: RDD[(Char, String)] = word2LineRdd.map { x =>
