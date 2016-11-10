@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object aggregateByKeyEx {
 
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("aggregateByKeyEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 

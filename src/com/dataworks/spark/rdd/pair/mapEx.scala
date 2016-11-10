@@ -24,6 +24,7 @@ object mapEx {
       (x._1.charAt(0), x._2.split(" " + " ")(0))
     }
     char2WordRdd.foreach(println)
+    println(char2WordRdd.toDebugString)
   }
 
 }
