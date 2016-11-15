@@ -21,9 +21,9 @@ object mapValuesEx {
     val filteredRdd: RDD[String] = baseRDD.filter(line => !line.isEmpty).flatMap(_.split(" "))
     val pair: RDD[(Int, String)] = filteredRdd.map(x => (x.length, x))
 
-    val mappedValRdd: RDD[(Int, String)] = pair.mapValues(x => x.toUpperCase)
+    val mappedValRdd: RDD[(Int, Seq[String])] = pair.mapValues(x => Seq(x.toUpperCase, x.toLowerCase))
     val mappedVal: RDD[Array[String]] = mappedValRdd.glom().map(e => {
-      e.map { case (key, value) => s"$key -> $value" }
+      e.map { case (key, value) => s"$key -> ${value.mkString("&")}" }
     })
 
     mappedVal.foreach(e => println(e.mkString("\n")))
