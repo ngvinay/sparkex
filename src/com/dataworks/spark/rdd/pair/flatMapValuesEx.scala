@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object flatMapValuesEx {
   def main(args: Array[String]): Unit = {
-    val conf: SparkConf = new SparkConf().setAppName("mapValuesEx").setMaster("local")
+    val conf: SparkConf = new SparkConf().setAppName("flatMapValuesEx").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
