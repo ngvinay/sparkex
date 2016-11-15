@@ -6,7 +6,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 /**
   * Created by Sandeep on 11/15/16.
   */
-object sortByKey {
+object sortByKeyEx {
   def main(args: Array[String]): Unit = {
     val conf: SparkConf = new SparkConf().setAppName("sortByKey").setMaster("local")
     val sc: SparkContext = new SparkContext(conf)
