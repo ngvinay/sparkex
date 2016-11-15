@@ -19,7 +19,8 @@ object groupByKeyEx {
   def groupByKey(sc: SparkContext): Unit = {
     val baseRDD: RDD[String] = sc.textFile("/Users/Sandeep/dataworks/data/spark", 3)
     val filtered: RDD[String] = baseRDD.filter(line => !line.isEmpty)
-    val groupedRdd: RDD[(String, Iterable[String])] = filtered.groupBy(lines => lines.split(" ")(0))
+    val groupedRdd: RDD[(String, Iterable[String])] = filtered.groupBy(lines => lines.split(" ")
+    (0))
 
     val separator = ","
     val mapped: RDD[Array[String]] = groupedRdd.glom().map(e =>
