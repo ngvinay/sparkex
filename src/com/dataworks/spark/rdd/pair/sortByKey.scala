@@ -23,7 +23,6 @@ object sortByKey {
     val sortedRdd: RDD[(Int, String)] = pairRdd.sortByKey(ascending = true, numPartitions = 3).distinct()
 
     sortedRdd.foreach(x => println(x))
-
   }
 
 }
