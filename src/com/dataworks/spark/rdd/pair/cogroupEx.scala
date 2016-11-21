@@ -12,10 +12,10 @@ object cogroupEx {
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
-    subtractEx(sc)
+    cogroupEx(sc)
   }
 
-  def subtractEx(sc: SparkContext): Unit = {
+  def cogroupEx(sc: SparkContext): Unit = {
     val thisRDD: RDD[String] = sc.textFile("/Users/Sandeep/dataworks/data/this")
       .filter(x => !x.isEmpty)
     val thatRDD: RDD[String] = sc.textFile("/Users/Sandeep/dataworks/data/that")
