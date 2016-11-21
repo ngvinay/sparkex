@@ -12,10 +12,10 @@ object rightOuterJoinEx {
     val sc: SparkContext = new SparkContext(conf)
     sc.setLogLevel("OFF")
 
-    joinEx(sc)
+    rightJoinEx(sc)
   }
 
-  def joinEx(sc: SparkContext): Unit = {
+  def rightJoinEx(sc: SparkContext): Unit = {
     val thisRDD: RDD[String] = sc.textFile("/Users/Sandeep/dataworks/data/this")
       .filter(x => !x.isEmpty)
     val thatRDD: RDD[String] = sc.textFile("/Users/Sandeep/dataworks/data/that")
